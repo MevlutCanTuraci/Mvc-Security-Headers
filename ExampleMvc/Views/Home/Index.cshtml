@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div class="my-3">
+    <div>
+        <label>
+            <strong>
+                Nonce:
+            </strong>
+            @Html.Nonce()
+        </label>
+    </div>
+</div>
+
+
+@section Scripts{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"
+    integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" nonce="@Html.Nonce()">
+
+        $(document).ready(() => {
+            console.log("Page is ready")
+        });
+
+    </script>
+
+
+    <script type="text/javascript">
+
+        alert("No way! This script is not working :(");
+
+        $(document).ready(() => {
+            console.log("This script is not working :((((");
+        });
+
+    </script>
+
+}
+
